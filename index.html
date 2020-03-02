@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="index.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="countdownClock.js"></script> 
 </head>
 <body>
 	<header>
@@ -12,9 +13,32 @@
 	</header>
 	<main>
 		<div class="dashboard">
-			<section class="dashboard-item-1">TIME TILL ARRIVAL</section>
-			<section class="dashboard-item-2">BEVERAGES</section>
-			<section class="dashboard-item-3">FOOD</section>
+			<section class="dashboard-item-1">
+				<h1 class="title">TIME TILL ARRIVAL</h1>
+				<table class="countdownToMars">
+					<tr>
+						<td colspan="4">Christmas Countdown</td>
+					</tr>
+					<tr class="info">
+						<td id="days">120</td>
+						<td id="hours">4</td>
+						<td id="minutes">12</td>
+						<td id="seconds">22</td>
+					</tr>
+					<tr>
+						<td>Days</td>
+						<td>Hours</td>
+						<td>Minutes</td>
+						<td>Seconds</td>
+					</tr>
+				</table>
+			</section>
+			<section class="dashboard-item-2">
+				<h1 class="title">BEVERAGES</h1>
+			</section>
+			<section class="dashboard-item-3">
+				<h1 class="title">FOOD</h1>
+			</section>
 	</main>
 	<footer>
 	</footer>
