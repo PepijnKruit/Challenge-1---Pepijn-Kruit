@@ -1,46 +1,60 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Challenge 1</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="index.css" type="text/css" rel="stylesheet">
-	<script type="text/javascript" src="countdownClock.js"></script> 
-</head>
-<body>
-	<header>
-		<img src="logo.png" alt="SpaceX logo" class ="logo">
-	</header>
-	<main>
-		<div class="dashboard">
-			<section class="dashboard-item-1">
-				<h1 class="title">TIME TILL ARRIVAL</h1>
-				<table class="countdownToMars">
-					<tr>
-						<td colspan="4">Christmas Countdown</td>
-					</tr>
-					<tr class="info">
-						<td id="days">120</td>
-						<td id="hours">4</td>
-						<td id="minutes">12</td>
-						<td id="seconds">22</td>
-					</tr>
-					<tr>
-						<td>Days</td>
-						<td>Hours</td>
-						<td>Minutes</td>
-						<td>Seconds</td>
-					</tr>
-				</table>
-			</section>
-			<section class="dashboard-item-2">
-				<h1 class="title">BEVERAGES</h1>
-			</section>
-			<section class="dashboard-item-3">
-				<h1 class="title">FOOD</h1>
-			</section>
-	</main>
-	<footer>
-	</footer>
-</body>
+	<head>
+		<title>Challenge 1</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="index.css" type="text/css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+		<script type="text/javascript" src="countdownClock.js"></script> 
+	    <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+	    <script type="text/javascript" src="beveragesChart.js"></script> 
+	</head>
+	<body>
+		<header>
+			<img src="logo.png" alt="SpaceX logo" class ="logo">
+		</header>
+		<main>
+			<div class="dashboard">
+				<section class="dashboard-item-1">
+					<h1 class="title-1">TIME TILL ARRIVAL</h1>
+					<p id="demo" class="demo"></p>
+				</section>
+				<section class="dashboard-item-2">
+					<h1 class="title-2">FUEL</h1>
+					<div class="ct-chart-1 ct-perfect-fourth"></div>
+						<script>
+							new Chartist.Line('.ct-chart-1', {
+	  							labels: [28125, 56250, 84375, 112500, 140625, 168750, 196875, 225000],
+	  							series: [
+	    									[161437, 151437, 136437, 126437]
+	  									]
+							}, {
+	  							low: 0,
+	  							showArea: true
+							});
+	    				</script>
+				</section>
+				<section class="dashboard-item-3">
+					<h1 class="title-3">FOOD</h1>
+					<div class="ct-chart-2 ct-perfect-fourth"></div>
+	  					<script>
+	    					var data = {
+	  						series: [5, 3, 4]
+							};
+
+							var sum = function(a, b) { return a + b };
+
+							new Chartist.Pie('.ct-chart-2', data, {
+	  							labelInterpolationFnc: function(value) {
+	    							return Math.round(value / data.series.reduce(sum) * 100) + '%';
+	  							}
+							});
+	   					</script>
+				</section>
+			</div>
+		</main>
+		<footer>
+		</footer>
+	</body>
 </html>
