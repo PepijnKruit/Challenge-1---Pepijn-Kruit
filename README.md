@@ -7,10 +7,7 @@ aankomende aankomst op Mars. Astronauten moeten de interface overal op
 het schip kunnen gebruiken en op elke verwachte schermgrootte.
 
 ## Toelichting keuzes dashboard
-sd
-s
 
-sdsd
+### Kleur
 
-
-sd
+sdsds
