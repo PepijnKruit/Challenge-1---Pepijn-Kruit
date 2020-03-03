@@ -8,7 +8,6 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
 		<script type="text/javascript" src="countdownClock.js"></script> 
 	    <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
-	    <script type="text/javascript" src="beveragesChart.js">
 	    </script> 
 	</head>
 	<body>
@@ -26,15 +25,17 @@
 					<div class="ct-chart-1 ct-perfect-fourth"></div>
 						<script>
 							new Chartist.Line('.ct-chart-1', {
-	  							labels: [28125, 56250, 84375, 112500, 140625, 168750, 196875, 225000],
+	  							labels: [28, 56, 84, 112, 140, 169, 197, 225],
 	  							series: [
-	    									[161437, 151437, 136437, 126437]
+	    									[161, 151, 136, 126]
 	  									]
 							}, {
 	  							low: 0,
 	  							showArea: true
 							});
 	    				</script>
+	    			<p class="x-as">x-as is multiplied by a million</p>
+	    			<p class="y-as">y-as is multiplied by a thousand</p>
 				</section>
 				<section class="dashboard-item-3">
 					<h1 class="title-3">FOOD</h1>
@@ -62,7 +63,5 @@
 				</section>
 			</div>
 		</main>
-		<footer>
-		</footer>
 	</body>
 </html>
