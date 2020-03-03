@@ -5,10 +5,13 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="index.css" type="text/css" rel="stylesheet">
+
+		<!--Graph site CSS en Javascript-->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
-		<script type="text/javascript" src="countdownClock.js"></script> 
-	    <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
-	    </script> 
+		<script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+
+		<!--Externe countdown klok file van Javascript-->
+		<script type="text/javascript" src="countdownClock.js"></script>
 	</head>
 	<body>
 		<header>
@@ -16,10 +19,14 @@
 		</header>
 		<main>
 			<div class="dashboard">
+
+				<!--Countdown klok-->
 				<section class="dashboard-item-1">
 					<h1 class="title-1">TIME TILL ARRIVAL</h1>
 					<p id="demo" class="demo"></p>
 				</section>
+
+				<!--FUEL graph-->
 				<section class="dashboard-item-2">
 					<h1 class="title-2">FUEL</h1>
 					<div class="ct-chart-1 ct-perfect-fourth"></div>
@@ -37,7 +44,11 @@
 	    			<p class="x-as">x-as is multiplied by a million</p>
 	    			<p class="y-as">y-as is multiplied by a thousand</p>
 				</section>
+
+				<!--Food en beverages graph-->
 				<section class="dashboard-item-3">
+
+					<!--Food graph-->
 					<h1 class="title-3">FOOD</h1>
 					<div class="ct-chart-2 ct-perfect-fourth"></div>
 	  					<script>
@@ -48,8 +59,12 @@
 								distributeSeries: true
 							});
 	   					</script>
-	   				<br />
-	   				<br />
+
+				<!--Space tussen food graph en beverages graph-->
+	   			<br />
+	   			<br />
+
+	   				<!--Beverages graph-->
 	   				<h1 class="title-4">BEVERAGES</h1>
 					<div class="ct-chart-3 ct-perfect-fourth"></div>
 	  					<script>

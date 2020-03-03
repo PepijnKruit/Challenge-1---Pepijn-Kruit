@@ -1,8 +1,17 @@
+/*-----Algemeen-----*/
+
 body {
 	font-family: 'Brandon Grotesque', 'Helvetica', sans-serif;
 	background-color: #000;
 	padding: 1rem;
 }
+
+h1 {
+	color: #fff;
+}
+
+
+/*-----Header-----*/
 
 .logo {
 	max-width: 165px;
@@ -13,9 +22,8 @@ body {
 	width: 50%;
 }
 
-h1 {
-	color: #fff;
-}
+
+/*-----Main-----*/
 
 .dashboard {
 	display: grid;
@@ -41,6 +49,9 @@ h1 {
 	max-height: 200px;
 }
 
+
+/*-----Mobiele versie-----*/
+
 @media (min-width: 250px) {
 	.dashboard-item-1, .dashboard-item-2, .dashboard-item-3 {
 		background: #fff;
@@ -60,6 +71,9 @@ h1 {
 	}
 }
 
+
+/*-----Tussenversie van mobiel en tablet-----*/
+
 @media (min-width: 450px) {
 	.demo {
 		text-align: center;
@@ -69,6 +83,9 @@ h1 {
 		padding-left: 5%;
 	}
 }
+
+
+/*-----Tablet versie-----*/
 
 @media (min-width: 768px) {
 	.ct-chart-1 {
@@ -84,6 +101,9 @@ h1 {
 		padding-bottom: 100px;
 	}
 }
+
+
+/*-----Laptop versie-----*/
 
 @media (min-width: 1024px) {
 	.title-1, .title-2, .title-3, .title-4 {
@@ -145,6 +165,9 @@ h1 {
 		grid-column: 2/3;
 	}
 }
+
+
+/*-----Maximale breedte-----*/
 
 @media (min-width: 2560px) {
 	.dashboard {
