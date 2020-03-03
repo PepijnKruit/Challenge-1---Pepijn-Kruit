@@ -25,13 +25,17 @@ footer {
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	grid-row-gap: 16px;
-	grid-auto-rows: 256px;
+	grid-auto-rows: auto auto;
 	padding-top: 32px;
 	color: #000;
 	font-weight: bold;
 }
 
-.title-1, .title-2, .title-3 {
+.dashboard-item-3 {
+	grid-row: 3/5;
+}
+
+.title-1, .title-2, .title-3, .title-4 {
 	font-size: 20px;
 	color: #000;
 }
@@ -40,13 +44,9 @@ footer {
 	font-size: 80px;
 }
 
-.ct-chart-1, .ct-chart-2 {
-	max-width: 200px;
+.ct-chart-1, .ct-chart-2, .ct-chart-3 {
+	max-width: auto;
 	max-height: 200px;
-}
-
-.ct-chart-2 {
-	color: #fff;
 }
 
 @media (min-width: 250px) {
@@ -58,26 +58,50 @@ footer {
 	}
 
 	.demo {
-		font-size: 30px;
+		font-size: 300%;
+	}
+}
+
+@media (min-width: 450px) {
+	.demo {
+		text-align: center;
 	}
 }
 
 @media (min-width: 768px) {
-	.demo {
-		font-size: 50px;
-		text-align: center;
+	.title-3 {
+		grid-row: 1;
+		grid-column: 1/2;
+	}
+
+	.title-4 {
+		grid-row: 1;
+		grid-column: 2/3;
 	}
 
 	.ct-chart-1 {
 		max-width: 600px;
 		max-height: 250px;
 	}
+
+	.ct-chart-2 {
+		grid-row: 2;
+		grid-column: 1/2;
+	}
+
+	.ct-chart-3 {
+		grid-row: 2;
+		grid-column: 2/3;
+	}
 }
 
 @media (min-width: 1024px) {
+	.title-1, .title-2, .title-3, .title-4 {
+		font-size: 150%;
+	}
+
 	.dashboard {
 		grid-column-gap: 24px;
-		grid-auto-rows: 320px;
 	}
 
 	.dashboard-item-1 {
@@ -92,18 +116,20 @@ footer {
 	.dashboard-item-3 {
 		grid-row: 2;
 		grid-column: 7/13;
+		display: grid;
+		grid-template-columns: repeat(2,1fr);
 	}
 
 	.demo {
-		font-size: 100px;
+		font-size: 400%;
 	}
 
 	.ct-chart-1 {
 		max-width: 600px;
 		max-height: 250px;
 	}
-	
-	.ct-chart-2 {
+
+	.ct-chart-2, .ct-chart-3 {
 		max-height: 250px;
 		max-width: 300px;
 	}
