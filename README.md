@@ -1,4 +1,4 @@
-# Challenge 1 - Pepijn Kruit
+# Challenge 1
  Challenge 1 voor het vak XT2 met als opdrachtgever SpaceX.
 
 ## Achtergrondinformatie van deze challenge
